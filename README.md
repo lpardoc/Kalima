@@ -1,7 +1,7 @@
 # Kalima
 Webpage for Kalima Estudio
 
-This is my first project :)
+This is my very first project :)
 
 It is a personal webpage for a Graphic Desing Studio located in Málaga, Spain. It includes a task manager for the projects that this studio have.
 
