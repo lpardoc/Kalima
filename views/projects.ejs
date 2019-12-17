@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="../../images/favicon.png">
+    <script src="../../javascripts/dateConverter.js"></script>
+    <link rel="icon" type="image/png" href="../../images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/86bde55c41.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../stylesheets/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projects</title>
+</head>
+
+<body>
+    <div class="container-fluid mainContainer ProjectsCardsContainer">
+
+        <nav>
+            <a href="/"><span class="menuButton">&times;</span></a>
+            <img class="kaliLogo navPage" id="kaliLogo" src="../../images/KALIMA22.png" alt="">
+        </nav>
+        <div class="row buttonContainerAdd "><a href="/projects/create"> <button class="btn buttonAddProject"><i
+                        class="fas fa-plus"></i> Crear nuevo
+                    proyecto</button></a></div>
+        <div class="row">
+            <% results.forEach(function(data){ %>
+            <div class="col-sm-3 col-12">
+                <div class="card projectsContainer" style="width: 18rem;">
+                    <div class="card-body cardData">
+
+                        <h5 class="card-title"><%= data.name %>
+                        </h5>
+                        <a href="/projects/createtask/<%= data.id_project %>"><span
+                                class="badge badge-secondary addTaskButton"> <i class="fas fa-plus"></i>
+                                Añadir tarea</span></a>
+
+
+                        <p class="card-subtitle mb-2 text-muted descriptionText"><%= data.description %></p>
+
+                        <span>Fecha de comienzo</span>
+                        <p class="card-subtitle mb-2 text-muted" id="date_start<%= data.id_project %>">
+                            <%= data.date_start %> </p>
+
+                        <span>Fecha de fin</span>
+                        <p class="card-subtitle mb-2 text-muted" id="date_end<%= data.id_project %>">
+                            <%= data.date_end %> </p>
+
+                        <span>Fecha proyectada de finalización</span>
+                        <p class="card-subtitle mb-2 text-muted" id="projectedDate<%= data.id_project %>">
+                            <%= data.projected_end_date %> </p>
+
+                        <span>Presupuesto</span>
+                        <p class="card-subtitle mb-2 text-muted"> <%= data.budget %> </p>
+                        <div class="buttonContainerOptions">
+                            <a href="/projects/update/<%= data.id_project %>"><button
+                                    class="btn buttonEdit cardButton"><i class="fas fa-edit"></i> </button></a>
+                            <a href="/projects/delete/<%= data.id_project %>"><button
+                                    class="btn buttonDelete cardButton"><i class="fas fa-eraser"></i> </button></a>
+                            <a href="/projects/task/<%= data.id_project %>"> <button class="btn buttonShow cardButton"><i
+                                        class="far fa-eye"></i></button> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script>
+        let date_start = null
+        let dateEnd = null
+        let projectedDate = null
+            <% results.forEach(function (data) { %>
+                dateStart = document.getElementById("date_start<%= data.id_project %>")
+                convertDateShow(dateStart.innerHTML, dateStart)
+
+                dateEnd = document.getElementById("date_end<%= data.id_project %>")
+                convertDateShow(dateEnd.innerHTML, dateEnd)
+
+                projectedDate = document.getElementById("projectedDate<%= data.id_project %>")
+                convertDateShow(projectedDate.innerHTML, projectedDate)
+                    <% }) %>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

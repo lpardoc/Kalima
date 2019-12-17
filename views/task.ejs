@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <link rel="icon" type="image/png" href="../../images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="../../javascripts/dateConverter.js"></script>
+    <link rel="stylesheet" href="../../stylesheets/style.css">
+    <script src="https://kit.fontawesome.com/86bde55c41.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= results2.name %></title>
+</head>
+
+<body>
+    <div class="row mainContainer">
+        <div class="col-sm-3 col-12"></div>
+        <div class="col-sm-6 col-12 taskCol">
+            <div class="row">
+                <div class="col-sm-6 col-12">
+                    <h2><%= results2.name %></h2>
+                </div>
+                <div class="col-sm-6 col-12 d-flex flex-row-reverse">
+                    <div><a href="/projects/createtask/<%= results2.id_project %>"><button
+                                class="btn acceptButtonProject taskButtonTop"><i class="fas fa-plus"></i> Nueva
+                                tarea</button></a> </div>
+                    <div><a href="/projects"><button class="btn btn-dark taskButtonTop"><i
+                                    class="fas fa-arrow-left"></i>
+                                Atrás</button></a></div>
+                </div>
+            </div>
+            <hr>
+            <% results.forEach(function(data){ %>
+            <div class="row taskContainer">
+                <div class="col-12">
+                    <p> <%= data.name %> <span class="taskDeadline" id="deadline<%= data.id_task %>">
+                            <%= data.deadline %> </span> </p>
+                    <p> <%= data.description %> </p>
+                    <a href="/projects/task/edit/<%= data.id_task %>"> <button class="btn buttonEdit editTaskButton"><i
+                                class="fas fa-edit"></i> Editar</button> </a>
+                    <a href="/projects/task/delete/<%= data.id_task %>"><button class="btn buttonDelete editTaskButton"><i
+                                class="fas fa-eraser"></i> Eliminar</button></a>
+                </div>
+            </div>
+
+
+            <hr>
+            <% }) %>
+
+
+            
+        </div>
+    </div>
+
+
+
+
+
+        <script>
+            let deadline = null
+                <% results.forEach(function (data) { %>
+                    deadline = document.getElementById("deadline<%= data.id_task %>")
+                    convertDateShow(deadline.innerHTML, deadline)
+                        <% }) %>
+        </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

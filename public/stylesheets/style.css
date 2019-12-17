@@ -1,0 +1,510 @@
+.editContainer {
+  min-height: 100vh;
+}
+
+.carouselImg {
+  height: 100vh !important;
+}
+
+.carouselImgNotMain {
+  height: 90.8vh !important;
+}
+
+.ProjectsCardsContainer {
+  margin-right: 50px;
+}
+
+.cardButton {
+  margin-top: 5px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.formContainer {
+  min-height: 97vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.25);
+  font-weight: 500;
+  color: rgb(110, 110, 110);
+  padding-top: 50px;
+}
+
+.cardData {
+  min-height: 467px;
+  font-family: "Roboto", sans-serif;
+  box-shadow: 0px 0px 50px 3px rgb(0, 0, 0);
+}
+
+.taskCol {
+  min-height: 100vh;
+  background-color: white;
+  box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.25);
+  font-weight: 500;
+  color: rgb(110, 110, 110);
+  padding-top: 25px;
+  padding-left: 25px !important;
+}
+
+.taskDeadline {
+  position: absolute;
+  right: 25px;
+}
+
+.editTaskButton {
+  font-size: 12px !important;
+}
+
+.taskButtonTop {
+  margin-left: 10px;
+}
+
+.buttonContainerAdd {
+  font-family: "Roboto", sans-serif;
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonContainerOptions {
+  font-family: "Roboto", sans-serif;
+  bottom: 0px;
+  position: relative;
+}
+
+.projectsContainer {
+  box-shadow: 0px 0px 50px 3px rgba(0, 0, 0, 0.151);
+  margin-top: 25px;
+}
+
+.inputCreate {
+  margin-bottom: 2%;
+  width: 100%;
+}
+
+.formDiv {
+  width: 80%;
+}
+
+.mainContainer {
+  background-color: rgba(0, 0, 0, 0.88);
+  font-family: "Roboto", sans-serif;
+  margin: 0px !important;
+  min-height: 100vh;
+}
+
+.cancelButton {
+  position: absolute;
+  bottom: 61px;
+  right: 184px;
+}
+
+.cancelButtonEditProject {
+  position: absolute;
+  bottom: 22px;
+  right: 292px;
+}
+
+.cancelButtonCreateTask {
+  position: absolute;
+  bottom: 37px;
+  right: 184px;
+  background-color: rgb(255, 118, 94);
+  color: white;
+}
+
+.cancelButtonCreateTask:hover {
+  background-color: rgb(212, 101, 81);
+  color: white;
+}
+
+.cancelButtonCreate {
+  position: absolute;
+  bottom: 50px;
+  right: 150px;
+  background-color: rgb(255, 118, 94);
+  color: white;
+}
+
+.cancelButtonCreate:hover {
+  color: white;
+  background-color: rgb(212, 101, 81);
+}
+
+.cancelButtonEditTask {
+  position: absolute;
+  bottom: 94px;
+  right: 183px;
+}
+
+.acceptButton {
+  margin-top: 10px;
+}
+
+.claseParaRafa {
+  text-align: center;
+}
+
+.taskContainer {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.warningDates {
+  color: red;
+}
+
+.descriptionText {
+  margin-top: 10px;
+}
+
+.listNav {
+  display: inline;
+}
+
+.navbarClass {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.navbarDiv {
+  background-color: black;
+}
+
+.navbarDivLink {
+  color: white !important;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: larger;
+}
+
+.logoImg {
+  width: 75%;
+}
+
+.designText {
+  /* margin-right: -75px; */
+  font-size: 70px;
+  text-align: right;
+}
+
+.desingImg {
+  margin-left: -75px;
+}
+
+.titleRow {
+  width: 100vw;
+  border-bottom: 5px solid black;
+}
+
+.titleText {
+  text-align: right;
+  margin-bottom: 0px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+html {
+  user-select: none;
+}
+
+/*---------All page menu start---------*/
+.navDiv{
+  position: absolute;
+  z-index: 16;
+}
+.menuButton {
+  position: absolute;
+  top: 10px;
+  right: 45px;
+  font-size: 60px;
+  z-index: 1;
+  color: white;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+
+.closebtn:hover {
+  text-decoration: underline !important;
+}
+
+.menuButton:hover {
+  text-decoration: underline;
+  color: #f1f1f1;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-x: hidden;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.overlay-content {
+  position: relative;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.linkMenu:hover {
+  transform: scale(1.1);
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none !important;
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 5px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.footerDiv {
+  position: absolute;
+  right: 15px;
+  bottom: 5px;
+  display: flex;
+}
+
+.footerText {
+  font-size: 15px !important;
+  font-family: "Roboto", sans-serif !important;
+  padding-left: 15px !important;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media (min-width: 1370px) {
+  .overlay a {
+    font-size: 40px;
+  }
+  .kaliLogoInnerImg {
+    margin-top: 200px !important;
+  }
+  .overlay-content {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 570px) {
+  .buttonContainerAdd {
+    padding-top: 105px;
+  }
+  .projectsContainer {
+    margin-left: 50px;
+  }
+  .footerDiv {
+    right: 0px;
+    bottom: 8px;
+  }
+  .footerText {
+    font-size: 10px !important;
+  }
+  .overlay a {
+    font-size: 50px;
+  }
+  .cancelButtonCreate {
+    bottom: 3px;
+    right: 160px;
+  }
+  .cancelButton {
+    bottom: 82px;
+    right: 162px;
+  }
+  .cancelButtonCreateTask {
+    right: 160px;
+    bottom: 10px;
+  }
+  .cancelButtonEditTask {
+    bottom: 143px;
+    right: 162px;
+  }
+}
+
+.staffLink {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  font-size: 15px !important;
+  font-family: "Roboto", sans-serif;
+}
+
+/*---------All page menu end---------*/
+
+.buttonAddProject {
+  background-color: black !important;
+  color: white;
+  transition: transform 0.2s ease-in-out 0s;
+}
+
+.buttonAddProject:hover {
+  transform: scale(1.05);
+  color: wheat;
+}
+
+.kaliLogo {
+  position: absolute;
+  z-index: 1;
+  height: 7%;
+  top: 30px;
+  left: 35px;
+}
+
+.kaliLogoInner {
+  position: relative;
+  height: 8%;
+  text-align: center;
+}
+
+.kaliLogoInnerImg {
+  height: 100%;
+  position: relative;
+  margin-top: 100px;
+}
+
+.socialButtons {
+  position: absolute;
+  z-index: 1;
+  bottom: 20px;
+  right: 55px;
+  height: 30px;
+}
+
+.socialMediaImg {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.774);
+  border-radius: 50%;
+  margin-left: 5px;
+  transition: transform 0.1s ease-in-out 0s, padding-bottom 0.3s ease-in-out 0s;
+}
+
+.socialMediaImg:hover {
+  transform: scale(1.05);
+  color: white;
+  padding-bottom: 200px;
+}
+
+.logoKalimaNotMain {
+  height: 30px;
+}
+
+.navbarPersonalizado {
+  padding: 0px;
+  height: 60px;
+  background-color: black !important;
+}
+
+.divPrueba {
+  height: 2000px;
+}
+
+.buttonEdit {
+  background-color: rgb(255, 226, 98) !important;
+}
+
+.buttonCancelForm {
+  background-color: rgb(255, 118, 94) !important;
+  color: white !important;
+}
+
+.buttonCancelForm:hover {
+  background-color: rgb(228, 102, 80) !important;
+}
+
+.buttonDelete {
+  background-color: rgb(255, 118, 94) !important;
+}
+
+.buttonShow {
+  background-color: rgb(33, 182, 182);
+}
+
+.addTaskButton {
+  background-color: rgb(122, 81, 160);
+  font-size: 13px;
+}
+
+.acceptButton {
+  background-color: rgb(51, 143, 78);
+  color: white;
+  margin-bottom: 50px;
+}
+
+.acceptButton:hover {
+  color: white;
+  background-color: rgb(50, 129, 74);
+}
+
+.acceptButtonProject {
+  background-color: rgb(51, 143, 78) !important;
+  color: white !important;
+}
+
+.acceptButtonProject:hover {
+  background-color: rgb(50, 129, 74) !important;
+  color: white !important;
+}
+
+.plusContainerNotMain {
+  font-family: "Roboto", sans-serif;
+  margin-left: 61px !important;
+}
+
+.plusNotMain {
+  font-family: "Roboto", sans-serif;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+  display: unset;
+}
+
+.plusNotMain:hover {
+  text-decoration: underline;
+}
+
+.titleNotMainPage {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: white;
+  font-size: 23px;
+  margin-bottom: 0px;
+  margin-top: 20px;
+  margin-right: 25px;
+  letter-spacing: 1px;
+}
+.carousel1{
+  z-index: 2 ;
+}
